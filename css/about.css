@@ -1,0 +1,150 @@
+.team {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+}
+
+/* ABOUT US section cards */
+.team__card {
+  text-align: center;
+  display: flex;
+  word-wrap: break-word;
+  perspective: 1000px;
+  width: 260px;
+  height: 320px;
+}
+
+.team__card:hover {
+  transform: translateY(-5px);
+}
+
+.team__card-inner {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  border-radius: 2rem;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.team__card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.team__card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.15s;
+}
+
+/* Front of the card content */
+.team__name {
+  font-size: 2rem;
+  padding: 0.6rem 0;
+  color: var(--TEXT-COLOR);
+}
+
+.team__profile-picture-container {
+  width: 90%;
+  display: grid;
+  place-content: center center;
+  padding: 0 1rem;
+  margin: auto;
+}
+
+.team__profile-picture {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.team__contact-btn {
+  color: var(--BACKGROUND-COLOR);
+  font-weight: bolder;
+  font-size: 1.3rem;
+  background-image: var(--PRIMARY-COLOR-DARK-GRADIENT);
+  border-radius: inherit;
+  border: none;
+  width: fit-content;
+  padding: 0.5em 1em;
+  transition: all 0.15s;
+  margin: 0.5rem 0;
+}
+
+.team__contact-btn:hover {
+  box-shadow: 0 0 5px var(--PRIMARY-COLOR);
+  cursor: pointer;
+}
+
+.team__contact-btn:active {
+  transform: scale(0.9);
+}
+
+/* Back of the card content */
+.card-face--back {
+  transform: rotateY(180deg);
+}
+
+.card-face--back .team__card-back-content {
+  width: 100%;
+  height: 100%;
+  padding: 1rem 0.8rem;
+}
+
+.team__card-back-header {
+  font-size: 2rem;
+  white-space: wrap;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: var(--PRIMARY-COLOR-LIGHT-GRADIENT);
+  text-shadow: none;
+}
+
+.team__contact-info-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 1rem;
+  margin: 1rem 1.2rem;
+}
+
+.team__website-row--copy,
+.team__website-row--email {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 3fr 7fr;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background-image: var(--PRIMARY-COLOR-DARK-GRADIENT);
+  transition: all 0.15s;
+}
+
+.team__website-row--copy:hover,
+.team__website-row--email:hover {
+  cursor: pointer;
+  filter: brightness(120%);
+}
+
+.team__website-row--copy:active,
+.team__website-row--email:active {
+  transform: scale(0.9);
+}
+
+.team__website-row--copy > p,
+.team__website-row--email > p {
+  color: white;
+  font-weight: bolder;
+}

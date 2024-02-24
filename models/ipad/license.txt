@@ -1,0 +1,11 @@
+Model Information:
+* title:	iPad Mini 2023
+* source:	https://sketchfab.com/3d-models/ipad-mini-2023-26d30c671de44e89802511acfa48b6d4
+* author:	iSteven (https://sketchfab.com/OneSteven)
+
+Model License:
+* license type:	CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)
+* requirements:	Author must be credited. No commercial use. Modified versions can not be distributed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "iPad Mini 2023" (https://sketchfab.com/3d-models/ipad-mini-2023-26d30c671de44e89802511acfa48b6d4) by iSteven (https://sketchfab.com/OneSteven) licensed under CC-BY-NC-ND-4.0 (http://creativecommons.org/licenses/by-nc-nd/4.0/)

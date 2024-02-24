@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="UTSC Tennis Club" />
+    <meta content="Official website of the UTSC Tennis Club" />
+    <title>UTSC Tennis Club</title>
+    <link rel="icon" href="img/general/logo.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <script src="scripts/app.js" defer></script>
+    <script type="module" src="scripts/three.js"></script>
+  </head>
+  <body>
+    <div class="progress-bar-container">
+      <label for="progress-bar" class="title--xlarge">Loading...</label>
+      <progress id="progress-bar" value="0" max="100"></progress>
+    </div>
+
+    <canvas class="webgl"></canvas>
+    <header>
+      <div class="header__socials-row">
+        <a href="#" target="_blank">
+          <img
+            src="img/general/instagram-icon.webp"
+            alt="Instagram Logo"
+            height="60px"
+            width="60px"
+          />
+        </a>
+
+        <a href="#" target="_blank">
+          <img
+            src="img/general/discord-icon.webp"
+            alt="Discord Logo"
+            height="60px"
+            width="60px"
+          />
+        </a>
+      </div>
+
+      <h1>UTSC Tennis Club</h1>
+      <div class="header__prompt">
+        <div class="hidden" style="transition: all 2s">
+          <h3
+            class="text--big"
+            style="
+              color: var(--BACKGROUND-COLOR);
+              text-shadow: var(--shadow);
+              margin-top: 2rem;
+            "
+          >
+            Check us out!
+          </h3>
+          <h2 class="bouncing">
+            <a href="index.html#intro">👇</a>
+          </h2>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-wrapper">
+      <nav>
+        <div class="nav__container">
+          <a class="nav__link" href="index.html#">Home</a>
+          <a class="nav__link" href="about.html#">About</a>
+        </div>
+        <div class="nav__container">
+          <div class="nav__img-container">
+            <img class="nav__logo" src="img/general/logo.webp" alt="Logo" />
+          </div>
+        </div>
+        <div class="nav__container">
+          <a class="nav__link" href="vision.html#">Our Vision</a>
+          <a class="nav__link" href="about.html#contact#">Contact</a>
+        </div>
+      </nav>
+    </div>
+
+    <main>
+      <article class="intro" id="intro">
+        <h2 class="title">
+          WANT TO PLAY
+          <span class="highlight-text accent-gradient">TENNIS</span> ?
+          <span class="bouncing">🤔</span>
+        </h2>
+
+        <div class="hidden">
+          <section class="intro__player-types-section">
+            <div class="intro__player-type hidden">
+              <h3 class="subtitle beginner-bg">
+                <a href="#everyone-section">BEGINNER</a>
+              </h3>
+              <p class="text">
+                But I don't know how
+                <span class="bouncing" style="display: inline-block">😢</span>
+              </p>
+            </div>
+            <div class="intro__player-type hidden">
+              <h3 class="subtitle intermediate-bg">
+                <a href="#everyone-section">CASUAL</a>
+              </h3>
+              <p class="text">
+                idk, I'm not that good
+                <span class="bouncing" style="display: inline-block">😅</span>
+              </p>
+            </div>
+            <div class="intro__player-type hidden">
+              <h3 class="subtitle advanced-bg">
+                <a href="#everyone-section">ADVANCED</a>
+              </h3>
+              <p class="text">
+                Yeah, let's do it!
+                <span class="bouncing" style="display: inline-block">😎</span>
+              </p>
+            </div>
+          </section>
+          <h2 class="point-down-emoji bouncing">👇</h2>
+        </div>
+
+        <div class="section-title hidden" id="everyone-section">
+          <h2 class="title">
+            <span class="highlight-text light-gradient">EVERYONE</span>
+            is Welcome!
+          </h2>
+          <p class="text--big">
+            No matter your experience level, we welcome you to our club!
+          </p>
+        </div>
+
+        <section class="intro__benefits-scroller snaps-inline">
+          <div class="intro__benefit-container container">
+            <h2>Beginner-friendly</h2>
+            <div class="intro__benefit-description-container">
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                ducimus earum alias incidunt odit eveniet quibusdam porro, illo
+                aliquid obcaecati placeat
+              </p>
+              <img
+                class="intro__benefit-img"
+                src="img/general/placeholder_600x400.webp"
+                alt="placeholder image"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="intro__benefit-container container">
+            <h2>Classes</h2>
+            <div class="intro__benefit-description-container">
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                ducimus earum alias incidunt odit eveniet quibusdam porro, illo
+                aliquid obcaecati placeat
+              </p>
+              <img
+                class="intro__benefit-img"
+                src="img/general/placeholder_600x400.webp"
+                alt="placeholder image"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="intro__benefit-container container">
+            <h2>Friendly Matches</h2>
+            <div class="intro__benefit-description-container">
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                ducimus earum alias incidunt odit eveniet quibusdam porro, illo
+                aliquid obcaecati placeat
+              </p>
+              <img
+                class="intro__benefit-img"
+                src="img/general/placeholder_600x400.webp"
+                alt="placeholder image"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="intro__benefit-container container">
+            <h2>Drop-Ins</h2>
+            <div class="intro__benefit-description-container">
+              <p class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam
+                ducimus earum alias incidunt odit eveniet quibusdam porro, illo
+                aliquid obcaecati placeat
+              </p>
+              <img
+                class="intro__benefit-img"
+                src="img/general/placeholder_600x400.webp"
+                alt="placeholder image"
+                width="600"
+                height="400"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <article class="join">
+        <div class="section-title hidden">
+          <h2 class="title">
+            Does that sound like
+            <span class="highlight-text light-gradient">FUN</span>?
+            <span class="bouncing">😆</span>
+          </h2>
+          <h2 class="point-down-emoji bouncing">👇</h2>
+        </div>
+
+        <h2 class="title--xlarge light-gradient hidden">JOIN US</h2>
+
+        <!-- <div class="join__form">
+          <form action="POST">
+            <section class="form-inputs-section">
+              <div class="join__form-section">
+                <label for="name">Name: </label> <br />
+                <input
+                  type="text"
+                  id="name"
+                  name="join__name"
+                  placeholder="Your Name"
+                  required
+                />
+                <br />
+              </div>
+              <div class="join__form-section">
+                <label for="email">UofT Email: </label> <br />
+                <input
+                  type="email"
+                  id="email"
+                  name="join__email"
+                  placeholder="student@mail.utoronto.ca"
+                  required
+                />
+                <br />
+              </div>
+            </section>
+            <section class="form-inputs-section">
+              <label for="comments"
+                >(Optional) Please let us know what your expectations for this
+                club are</label
+              >
+              <textarea
+                name="join__form-textarea"
+                id="comments"
+                cols="30"
+                rows="10"
+                placeholder="Any comments..."
+              ></textarea>
+            </section>
+            <input type="submit" value="Submit" />
+          </form>
+        </div> -->
+      </article>
+    </main>
+    <footer>
+      <p>&copy; UTSC Tennis Club 2023</p>
+
+      <p class="text--small">
+        Follow us on:
+        <a href="http://" target="_blank" style="text-decoration: underline"
+          >Instagram</a
+        >
+        ,
+        <a href="http://" target="_blank" style="text-decoration: underline"
+          >Discord</a
+        >
+      </p>
+      <br />
+      <p class="text--small">Website created by Mark Onopchenko.</p>
+    </footer>
+  </body>
+</html>

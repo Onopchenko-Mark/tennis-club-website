@@ -1,0 +1,432 @@
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap");
+
+/* Title Fonts */
+@font-face {
+  font-family: "Neufreit";
+  src: url("/fonts/Neufreit.otf");
+}
+
+/* VARIABLES */
+:root {
+  /* COLOR PALLETTE */
+  --PRIMARY-COLOR: rgb(185, 40, 238);
+  --SECONDARY-COLOR: rgb(203, 4, 165);
+  --ACCENT-COLOR: rgb(15, 134, 15);
+  --PRIMARY-COLOR-LIGHT-GRADIENT: linear-gradient(
+    rgb(203, 4, 165),
+    rgb(185, 40, 238)
+  );
+  --PRIMARY-COLOR-DARK-GRADIENT: linear-gradient(
+    rgb(112, 89, 201),
+    rgb(185, 40, 238)
+  );
+  --ACCENT-COLOR-GRADIENT: linear-gradient(rgb(15, 134, 15), rgb(151, 219, 79));
+
+  --TEXT-COLOR: white;
+  --BACKGROUND-COLOR: white;
+
+  --BEGINNER-BG-COLOR: rgb(15, 134, 15);
+  --CASUAL-BG-COLOR: rgb(246, 170, 28);
+  --ADVANCED-BG-COLOR: rgb(240, 56, 107);
+
+  /* COLOR USED FOR DROP SHADOWS */
+  --PRIMARY-COLOR-RGB: 185, 40, 238;
+  --SECONDARY-COLOR-RGB: 203, 4, 165;
+  --ACCENT-COLOR-RGB: 15, 134, 15;
+
+  /* VARIABLES */
+  --scroll: 0;
+  --shadow: 2px 7px 5px rgba(0, 0, 0, 0.3),
+    0px -4px 10px rgba(255, 255, 255, 0.1);
+  --border-radius: 2rem;
+}
+
+/* RESET */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  scroll-margin-top: 10vh;
+}
+
+/* UTILITY CLASSES */
+/* COLORS */
+.accent-gradient {
+  background-image: var(--ACCENT-COLOR-GRADIENT);
+}
+
+.dark-gradient {
+  background-image: var(--PRIMARY-COLOR-DARK-GRADIENT);
+}
+
+.light-gradient {
+  background-image: var(--PRIMARY-COLOR-LIGHT-GRADIENT);
+}
+
+/* TEXT */
+.title--xlarge {
+  padding: 1em 1.5em;
+  color: var(--TEXT-COLOR);
+  margin: auto;
+  width: fit-content;
+  margin-bottom: 5vh;
+  transition: filter 0.25s;
+  font-size: 6rem;
+  border-radius: var(--border-radius);
+}
+
+.title--xlarge:hover {
+  filter: brightness(120%);
+  cursor: pointer;
+}
+
+.text--big {
+  font-family: "Neufreit";
+  font-size: 2rem;
+  line-height: 2.1rem;
+  text-align: center;
+}
+
+.text--small {
+  font-size: 1.3rem;
+}
+
+.highlight-text {
+  font-family: "Neufreit";
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: larger;
+  animation: pulse 2s ease-in-out infinite;
+  filter: brightness(120%);
+  -webkit-text-stroke: 2px #fff;
+}
+
+@keyframes pulse {
+  50% {
+    filter: brightness(100%);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1.5s;
+}
+
+@media (preferse-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.bouncing {
+  animation: bounce 0.5s;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.5, 0.05, 1, 0.5);
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 6px, 0);
+  }
+}
+
+/* .point-down-emoji {
+  width: 100%;
+  text-align: center;
+  font-size: 5rem;
+} */
+
+.container {
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: transparent;
+  background-image: radial-gradient(
+    rgb(255, 255, 255, 0.5),
+    rgb(255, 255, 255, 0.2)
+  );
+  box-shadow: var(--shadow);
+}
+
+/* GENERAL */
+html,
+body {
+  width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+body {
+  position: relative;
+  z-index: 1;
+  overflow-x: hidden;
+  background-color: #7302c8;
+  background-size: 130vw auto;
+  overscroll-behavior-y: none;
+}
+
+main,
+footer {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(26px);
+  margin: 1rem 10vw;
+  border-radius: var(--border-radius);
+  outline: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+main {
+  padding: 1rem 1rem 5rem;
+}
+
+footer {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding-block: 1rem;
+  margin: 3rem 20vw 1rem;
+}
+
+p {
+  color: var(--TEXT-COLOR);
+  max-width: 50ch;
+  text-wrap: wrap;
+  line-height: 1.5em;
+}
+
+span {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Neufreit";
+  color: var(--TEXT-COLOR);
+  text-shadow: var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  letter-spacing: -0.1rem;
+  text-shadow: var(--shadow);
+  margin-top: 13vh;
+  font-size: clamp(4rem, 20vh, 8rem);
+  color: var(--BACKGROUND-COLOR);
+  padding-inline: 1rem;
+  position: relative;
+  z-index: 100;
+}
+
+h2,
+h3 {
+  letter-spacing: -0.05rem;
+}
+
+h2 {
+  font-size: 4rem;
+  padding: 2rem 0 0.6rem 0;
+  text-align: center;
+}
+
+/* NAVIGATION */
+@media screen and (max-width: 559px) {
+  .nav-wrapper {
+    position: static;
+  }
+}
+
+@media screen and (min-width: 560px) {
+  .nav-wrapper {
+    position: sticky;
+    top: 1vh;
+    z-index: 99;
+  }
+}
+
+.nav-wrapper {
+  margin: 5vh 15vw 0;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 42.5% 15% 42.5%;
+  place-items: center;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0.2)
+  );
+  backdrop-filter: blur(20px);
+  border-radius: var(--border-radius);
+}
+
+.nav__img-container {
+  width: 100%;
+  height: 10vh;
+  position: relative;
+}
+
+.nav__logo {
+  position: absolute;
+  /* top: calc(-55vh + min(45.5vh, 1vh * var(--scroll) * 100 / 60));
+  left: 0;
+  right: calc(min(90vw, 1vw * var(--scroll) * (100 / 30)));
+  transform: scale(max(1, 5 * (1 - (var(--scroll) / (100/4.6))))); */
+  inset: 0;
+  margin: auto;
+  margin-inline: auto;
+  height: 12vh;
+}
+
+.nav__container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.nav__link {
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-decoration: none;
+  color: var(--TEXT-COLOR);
+  text-shadow: var(--shadow);
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--border-radius);
+  transition: all 0.1s;
+}
+
+.nav__link:hover {
+  transform: scale(1.02);
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav__link:active {
+  transform: scale(0.98);
+}
+
+/* .nav__dropdown-menu {
+  opacity: 0;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: calc(100% + 0.5rem);
+  background-color: rgba(255, 255, 255, 0.6);
+  background-image: none;
+  padding: 0.75rem;
+  border-radius: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transform: translateY(-10px);
+  transition: all 150ms ease-in-out;
+  pointer-events: none;
+}
+
+.nav__page-link:hover .nav__dropdown-menu {
+  opacity: 1;
+  z-index: 2;
+  transform: translateY(0);
+  pointer-events: auto;
+} */
+
+/* MEDIA QUERIES */
+@media screen and (width <= 426px) {
+  body {
+    background-image: url("../img/phone/background-phone_1920x2918.webp");
+  }
+
+  main {
+    margin: 1rem 0.5rem;
+  }
+
+  .title--xlarge {
+    font-size: 4rem;
+  }
+
+  h1 {
+    font-size: 7rem !important;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  .text--big {
+    font-size: 1.5rem !important;
+  }
+
+  .intro__benefits {
+    margin: 0 !important;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (426px < width <= 969px) {
+  body {
+    background-image: url("../img/HD/background-hd_3464x5264.webp");
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  main {
+    margin: 1rem 6vw !important;
+  }
+}
+
+@media screen and (969px < width <= 1440px) {
+  body {
+    background-image: url("../img/HD/background-hd_3464x5264.webp");
+  }
+
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (1440px < width) {
+  body {
+    background-image: url("../img/UHD/background.png");
+  }
+
+  p {
+    font-size: 1.7rem;
+  }
+}
